@@ -88,12 +88,12 @@ export default function HomePage() {
         /* === HERO === */
         .hero { position: relative; background: #f8f8f5; overflow: hidden; }
         .hero-bg-blue {
-          position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+          position: absolute; top: 0; right: 0; width: 45%; height: 100%;
           background: var(--primary); z-index: 0;
         }
         .hero-inner {
           position: relative; z-index: 1;
-          display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+          display: grid; grid-template-columns: 55% 45%; gap: 0;
           min-height: 500px;
         }
         .hero-left {
@@ -130,7 +130,7 @@ export default function HomePage() {
 
         /* Calculator */
         .calc-form {
-          background: var(--primary); padding: 50px 50px; color: #fff;
+          background: var(--primary); padding: 58px 32px 65px 71px; color: #fff;
           display: flex; flex-direction: column; justify-content: center;
           position: relative; z-index: 2;
         }
@@ -138,20 +138,21 @@ export default function HomePage() {
         .form-group { margin-bottom: 16px; }
         .form-group label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #fff; }
         .form-group input, .form-group select {
-          width: 100%; padding: 13px 16px; font-size: 15px;
-          border: none; background: #fff;
+          width: 350px; max-width: 100%; padding: 14px 20px; font-size: 16px;
+          border: 1px solid rgb(138, 138, 128); background: #fff;
           color: #333; font-family: 'Arimo', sans-serif; outline: none;
-          transition: box-shadow 0.2s;
+          transition: border-color 0.2s; height: 56px; box-sizing: border-box;
         }
         .form-group input::placeholder { color: #999; }
-        .form-group input:focus, .form-group select:focus { box-shadow: 0 0 0 3px var(--accent); }
-        .form-group select option { color: #333; background: #fff; }
+        .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
+        .form-group select option { color: #333; background: var(--accent); padding: 12px; }
         .form-submit {
-          width: 100%; padding: 14px 20px; background: var(--accent);
+          width: 350px; max-width: 100%; padding: 14px 20px; background: var(--accent);
           color: var(--secondary); font-size: 16px; font-weight: 700;
           text-transform: uppercase; border: none; cursor: pointer;
           box-shadow: var(--tertiary) 5px 5px 0px 0px;
           transition: transform 0.2s, box-shadow 0.2s; font-family: 'Arimo', sans-serif; margin-top: 8px;
+          height: 50px; box-sizing: border-box;
         }
         .form-submit:hover { transform: translate(2px,2px); box-shadow: var(--tertiary) 3px 3px 0px 0px; }
 
@@ -369,21 +370,28 @@ export default function HomePage() {
               </div>
               <div className="form-group">
                 <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" placeholder="+44 000 000 0000" />
+                <input type="tel" id="phone" placeholder="" />
               </div>
               <div className="form-group">
                 <label htmlFor="loan-type">Type of Loan *</label>
                 <select id="loan-type">
-                  <option value="">Select loan type</option>
-                  <option value="personal">Personal Loan</option>
-                  <option value="business">Business Loan</option>
-                  <option value="car">Car Finance</option>
+                  <option value="">Select option</option>
+                  <option value="utility">Utility Bill</option>
+                  <option value="rent">Rent or Mortgage</option>
+                  <option value="debt">Debt Consolidation</option>
+                  <option value="income">Temporary Income Reduction</option>
+                  <option value="vehicle">Vehicle</option>
+                  <option value="occasion">Special Occasion</option>
+                  <option value="household">Household Good</option>
                   <option value="home">Home Improvement</option>
+                  <option value="emergency">Emergency</option>
+                  <option value="living">Living Expense</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
               <div className="form-group">
                 <label htmlFor="amount">Amount of money (£) *</label>
-                <input type="number" id="amount" placeholder="1000" />
+                <input type="number" id="amount" placeholder="100" />
               </div>
               <button type="button" className="form-submit">GET YOUR FUNDS TODAY!</button>
             </div>
