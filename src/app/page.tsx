@@ -109,9 +109,10 @@ export default function HomePage() {
         }
         .hero-woman { width: 100%; height: 100%; object-fit: cover; display: block; }
         .hero-overlay-text {
-          position: absolute; bottom: 30px; left: 30px; right: 30px; z-index: 3;
-          font-size: 36px; font-weight: 700; color: #fff; line-height: 1.15;
+          position: absolute; bottom: 40px; right: 40px; z-index: 3;
+          font-size: 48px; font-weight: 700; color: #fff; line-height: 1.15;
           text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+          max-width: 494px; text-align: left; margin: 0 0 24px;
         }
         .hero-overlay-text span { color: var(--accent); }
         .hero-tagline {
@@ -129,21 +130,21 @@ export default function HomePage() {
 
         /* Calculator */
         .calc-form {
-          background: var(--primary); padding: 40px 40px; color: #fff;
+          background: var(--primary); padding: 50px 50px; color: #fff;
           display: flex; flex-direction: column; justify-content: center;
           position: relative; z-index: 2;
         }
-        .calc-form h3 { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 20px; }
-        .form-group { margin-bottom: 14px; }
-        .form-group label { display: block; font-size: 13px; margin-bottom: 4px; color: rgba(255,255,255,0.7); }
+        .calc-form h3 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 24px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #fff; }
         .form-group input, .form-group select {
-          width: 100%; padding: 11px 14px; font-size: 15px;
-          border: 2px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
-          color: #fff; font-family: 'Arimo', sans-serif; outline: none;
-          transition: border-color 0.2s;
+          width: 100%; padding: 13px 16px; font-size: 15px;
+          border: none; background: #fff;
+          color: #333; font-family: 'Arimo', sans-serif; outline: none;
+          transition: box-shadow 0.2s;
         }
-        .form-group input::placeholder { color: rgba(255,255,255,0.4); }
-        .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
+        .form-group input::placeholder { color: #999; }
+        .form-group input:focus, .form-group select:focus { box-shadow: 0 0 0 3px var(--accent); }
         .form-group select option { color: #333; background: #fff; }
         .form-submit {
           width: 100%; padding: 14px 20px; background: var(--accent);
